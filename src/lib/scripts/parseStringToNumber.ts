@@ -13,11 +13,11 @@ export function parseNumber(value: string): number {
 	return parsedNumber;
 }
 
-export function formatStringNumber(value: string): string {
+export function formatStringNumber(value: string, fixedPoints: number): string {
 	let parsedNumber = parseNumber(value);
 	if (parsedNumber > 1e3 || parsedNumber < 1) {
-		return parsedNumber.toExponential(2);
+		return parsedNumber.toExponential(fixedPoints);
 	}
 	if (Number.isInteger(parsedNumber)) return String(parsedNumber);
-	return parsedNumber.toFixed(2);
+	return parsedNumber.toFixed(fixedPoints);
 }

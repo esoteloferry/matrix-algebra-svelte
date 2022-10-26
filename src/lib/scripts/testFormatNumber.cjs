@@ -1,5 +1,5 @@
 exports.testData = {
-	formatString: [
+	"formatString": [
 		//Standard format
 		//Integer
 		{ input: '2.0', output: '2' },
